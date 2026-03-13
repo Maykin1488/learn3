@@ -736,7 +736,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019809724}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 70
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -767,8 +767,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42da6d89558598448059e6d6fba7bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerControler
-  jumpForce: 10
-  gravityModifier: 1
+  jumpForce: 700
+  gravityModifier: 2
   isOnground: 1
   gameOver: 0
 --- !u!1001 &6889358517865895009
@@ -781,7 +781,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2477021959214299176, guid: e69334ae22451174693e6912499ba6ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.0405
+      value: 16.23
       objectReference: {fileID: 0}
     - target: {fileID: 2477021959214299176, guid: e69334ae22451174693e6912499ba6ac, type: 3}
       propertyPath: m_LocalPosition.y
@@ -821,10 +821,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4979489035201518196, guid: e69334ae22451174693e6912499ba6ac, type: 3}
       propertyPath: m_Name
-      value: Obstacle
-      objectReference: {fileID: 0}
-    - target: {fileID: 4979489035201518196, guid: e69334ae22451174693e6912499ba6ac, type: 3}
-      propertyPath: m_TagString
       value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []

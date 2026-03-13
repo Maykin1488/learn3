@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class spawnManager : MonoBehaviour
 {
+    private PlayerControler playerControlerScript;
     public GameObject obstaclePrefab;
     private Vector3 spawnPos = new Vector3(25, 0, 0);
     private float startDelay = 2;
@@ -10,6 +11,7 @@ public class spawnManager : MonoBehaviour
     void Start()
     {
         InvokeRepeating("spawnObstacle", startDelay, repeatRate);
+        playerControlerScript = GameObject.Find("Player").GetComponent<PlayerControler>();
     }
 
     // Update is called once per frame
@@ -19,6 +21,9 @@ public class spawnManager : MonoBehaviour
     }
     void spawnObstacle()
     {
-        Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+        if (playerControlerScript.gameOver == false)
+        {
+            Instantiate(obstaclePrefab, spawnPos, obstaclePrefab.transform.rotation);
+        }
     }
 }
