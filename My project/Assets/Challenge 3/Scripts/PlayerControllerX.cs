@@ -16,6 +16,7 @@ public class PlayerControllerX : MonoBehaviour
     private AudioSource playerAudio;
     public AudioClip moneySound;
     public AudioClip explodeSound;
+    public AudioClip otskok;
 
 
     // Start is called before the first frame update
@@ -34,6 +35,10 @@ public class PlayerControllerX : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && !gameOver)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+        if (transform.position.y > 15)
+        {
+            transform.position = new Vector3(transform.position.x, 15, transform.position.z);
         }
     }
 
@@ -59,6 +64,7 @@ public class PlayerControllerX : MonoBehaviour
         else if (other.gameObject.CompareTag("Ground"))
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerAudio.PlayOneShot(otskok, 1.0f);
         }
 
     }
